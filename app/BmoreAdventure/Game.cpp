@@ -5,6 +5,7 @@
 Game::Game()
 {
 	this->commandProcessor = new CommandProcessor();
+	this->player = new Player();
 }
 
 
@@ -15,6 +16,7 @@ Game::~Game()
 void Game::start()
 {
 	while (true) {
-		this->commandProcessor->next();
+		Command* nextComm = this->commandProcessor->next();
+		nextComm->execute(this->player);
 	}
 }

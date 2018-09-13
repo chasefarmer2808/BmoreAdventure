@@ -1,4 +1,5 @@
 #include "CommandProcessor.h"
+#include "Player.h"
 
 #pragma once
 class Game
@@ -11,5 +12,6 @@ public:
 
 private:
 	CommandProcessor* commandProcessor;
+	Player* player;
 };
 

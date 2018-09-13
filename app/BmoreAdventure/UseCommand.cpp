@@ -11,6 +11,6 @@ UseCommand::~UseCommand()
 {
 }
 
-void UseCommand::execute() {
+void UseCommand::execute(Player* player) {
 	cout << "Using " << this->getEntity() << endl;
 }

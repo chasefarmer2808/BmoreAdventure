@@ -12,6 +12,15 @@ MoveCommand::~MoveCommand()
 {
 }
 
-void MoveCommand::execute() {
+void MoveCommand::execute(Player* player) {
 	cout << "Moving " << this->getEntity() << endl;
+	
+	if (this->getEntity() == "up") {
+		player->moveUp();
+	}
+	else if (this->getEntity() == "down") {
+		player->moveDown();
+	}
+
+	cout << "Player location: " << player->getLocation() << endl;
 }

@@ -11,16 +11,13 @@ CommandProcessor::~CommandProcessor()
 {
 }
 
-void CommandProcessor::next()
+Command* CommandProcessor::next()
 {
 	string input;
 	getline(cin, input);
 	vector<string> commTokens = this->tokenize(input);
 	Command* comm = this->createCommand(commTokens);
-
-	if (comm != NULL) {
-		comm->execute();
-	}
+	return comm;
 }
 
 vector<string> CommandProcessor::tokenize(string& input) {

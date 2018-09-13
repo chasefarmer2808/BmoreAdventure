@@ -7,7 +7,7 @@ public:
 	CommandProcessor();
 	~CommandProcessor();
 
-	void next();
+	Command* next();
 	void promptedNext(string prompt);
 
 private:
